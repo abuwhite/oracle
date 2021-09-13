@@ -1,4 +1,4 @@
-from magialyq import __version__
+from magipy import __version__
 
 
 def test_version():

@@ -1,4 +1,4 @@
-from magialyq.api import random
+from magipy.api import random
 
 
 def variant():

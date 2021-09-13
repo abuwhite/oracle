@@ -1,4 +1,4 @@
-from magialyq.api import config
+from magipy import config
 import rdoclient
 
 api = rdoclient.RandomOrgClient(config.API)
