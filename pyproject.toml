@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "magipy"
+name = "bot"
 version = "0.1.0"
 description = ""
 authors = ["znhv <znhv@yandex.com"]

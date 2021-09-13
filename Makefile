@@ -1,7 +1,7 @@
-export PYTHONPATH=src
+export PYTHONPATH=bot
 
 start:
-	poetry run bot
+	python3 -m bot
 
 test:
 	poetry run pytest tests
