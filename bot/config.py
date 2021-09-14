@@ -1,6 +1,5 @@
 class Config:
     BOT_TOKEN = "1828092814:AAEclsE8Sio47Jtc92SN9_5bVtcMrZeQdww"
-    API_RANDOM = "3abdbe26-9a16-42b1-b172-7f097b3fcf9b"
 
 
 class Messages:
