@@ -17,11 +17,11 @@ class Keyboard:
     def __init__(self):
         self.keyboard = telebot.types.ReplyKeyboardMarkup(True)
 
-    def clean(self):
+    def remove(self):
         self.keyboard = telebot.types.ReplyKeyboardRemove(True)
         return self.keyboard
 
-    def add_btn(self, *args):
+    def add(self, *args):
         self.keyboard.row(*args)
         return self.keyboard
 
@@ -42,7 +42,7 @@ def help_msg(message):
 
     bot.send_message(
         message.chat.id, Messages.HELP_MSG,
-        reply_markup=keyboard.add_btn("Всё понятно"),
+        reply_markup=keyboard.add("Всё понятно"),
         parse_mode='Markdown'
     )
 
@@ -54,7 +54,7 @@ def great_msg(message):
     bot.send_message(
         message.chat.id,
         Messages.GREAT_MESSAGE,
-        reply_markup=keyboard.clean()
+        reply_markup=keyboard.remove()
     )
 
 
@@ -64,7 +64,7 @@ def ask_msg(message):
 
     bot.send_message(
         message.chat.id, Messages.ASK_MESSAGE,
-        reply_markup=keyboard.add_btn("Помощь")
+        reply_markup=keyboard.add("Помощь")
     )
 
 
@@ -78,11 +78,12 @@ def get_answer(message):
         randrange(0, 1)
     )
 
-    text = answer + "\n" + warning + "\n" + question
+    text = '*{}*'.format(answer) + "\n" + warning + "\n" + question
 
     bot.send_message(
         message.chat.id, text,
-        reply_markup=keyboard.add_btn("Да", "Помощь")
+        reply_markup=keyboard.add("Да", "Помощь"),
+        parse_mode='Markdown'
     )
 
 
