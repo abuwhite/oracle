@@ -139,18 +139,6 @@ checkqa-mypy = ["mypy (==v0.761)"]
 testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "requests", "xmlschema"]
 
 [[package]]
-name = "rdoclient"
-version = "1.4.1"
-description = "RANDOM.ORG JSON-RPC API (Release 4) implementation."
-category = "main"
-optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
-
-[package.dependencies]
-requests = "*"
-six = "*"
-
-[[package]]
 name = "requests"
 version = "2.26.0"
 description = "Python HTTP for Humans."
@@ -167,25 +155,6 @@ urllib3 = ">=1.21.1,<1.27"
 [package.extras]
 socks = ["PySocks (>=1.5.6,!=1.5.7)", "win-inet-pton"]
 use_chardet_on_py3 = ["chardet (>=3.0.2,<5)"]
-
-[[package]]
-name = "six"
-version = "1.16.0"
-description = "Python 2 and 3 compatibility utilities"
-category = "main"
-optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
-
-[[package]]
-name = "telebot"
-version = "0.0.4"
-description = "A Telegram bot library, with simple route decorators."
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-requests = "*"
 
 [[package]]
 name = "urllib3"
@@ -211,7 +180,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "b43c3fce24b1d591eaace976e6245cb0311efa6b6260cfc9d0e8c2d28f45c3e1"
+content-hash = "a1b5d68e60672b73e1d5304c75c580a5b73c4df586a20afd29d420f5641bf738"
 
 [metadata.files]
 atomicwrites = [
@@ -265,21 +234,9 @@ pytest = [
     {file = "pytest-5.4.3-py3-none-any.whl", hash = "sha256:5c0db86b698e8f170ba4582a492248919255fcd4c79b1ee64ace34301fb589a1"},
     {file = "pytest-5.4.3.tar.gz", hash = "sha256:7979331bfcba207414f5e1263b5a0f8f521d0f457318836a7355531ed1a4c7d8"},
 ]
-rdoclient = [
-    {file = "rdoclient-1.4.1-py3-none-any.whl", hash = "sha256:4f4f53167f80e9312437075d9c4776d2923895f3d9682df39d100e084d03a094"},
-    {file = "rdoclient-1.4.1.tar.gz", hash = "sha256:62cad46057e676068378dfaa280bff439264516694fa923e2455295622fb660b"},
-]
 requests = [
     {file = "requests-2.26.0-py2.py3-none-any.whl", hash = "sha256:6c1246513ecd5ecd4528a0906f910e8f0f9c6b8ec72030dc9fd154dc1a6efd24"},
     {file = "requests-2.26.0.tar.gz", hash = "sha256:b8aa58f8cf793ffd8782d3d8cb19e66ef36f7aba4353eec859e74678b01b07a7"},
-]
-six = [
-    {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
-    {file = "six-1.16.0.tar.gz", hash = "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"},
-]
-telebot = [
-    {file = "telebot-0.0.4-py3-none-any.whl", hash = "sha256:1d692ee3c2f07c5caacb1a82f0b59e40cef84f58be84435be9c8ce667dee94a6"},
-    {file = "telebot-0.0.4.tar.gz", hash = "sha256:717f08f0cbb2b3bbba73e8b36cca466345b751d44e938235eaa24139073f3265"},
 ]
 urllib3 = [
     {file = "urllib3-1.26.6-py2.py3-none-any.whl", hash = "sha256:39fb8672126159acb139a7718dd10806104dec1e2f0f6c88aab05d17df10c8d4"},
