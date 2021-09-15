@@ -2,27 +2,38 @@
 
 The magic ball of predictions is a very simple and positive way to find out the answer to your question. The magic ball can give both a specific answer to the question yes or no, and surprise you a little with the answer.
 
+  
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
-```bash
-pip install foobar
+Clone the repo and install packages
+```shell
+$ git clone git@github.com:znhv/magipy.git && cd magipy && pip3 install -r requirements.txt
 ```
+
+Create .env with the environment variables listed below
+```shell
+magipy$ cd bot && touch .env
+```
+
+#### Environment variables
+`BOT_TOKEN` — Telegram bot token
+
+Also, please, consider looking at `.env.sample`.
 
 ## Usage
 
-```text
-import foobar
 
-# returns 'words'
-foobar.pluralize('word')
+Once you've setup your database and your configuration (see below) is complete, simply run:
+```shell
+$ python3 -m bot
 ```
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+## Commands
+Command | Description
+:--- | :---
+/start | Start bot.
+/help | Show Help Message.
 
-Please make sure to update tests as appropriate.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
