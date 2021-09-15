@@ -3,34 +3,25 @@
 
 import telebot
 
-from bot.config import Config, Messages
+from bot import config
 from bot.db import schema
 from random import randrange
+from bot.plugins.keyboard import Keyboard
+from bot.plugins import messages
 
-
-bot = telebot.TeleBot(Config.BOT_TOKEN)
-
-
-class Keyboard:
-    """Class keyboard"""
-
-    def __init__(self):
-        self.keyboard = telebot.types.ReplyKeyboardMarkup(True)
-
-    def remove(self):
-        self.keyboard = telebot.types.ReplyKeyboardRemove(True)
-        return self.keyboard
-
-    def add(self, *args):
-        self.keyboard.row(*args)
-        return self.keyboard
+bot = telebot.TeleBot(config.BOT_TOKEN)
 
 
 @bot.message_handler(commands=["start"])
 def start_msg(message):
+    """
+    Greets the user and shows the help.
+    :param message:
+    :return:
+    """
     bot.send_message(
         message.chat.id,
-        Messages.START_MSG,
+        messages.START_MSG,
         parse_mode='Markdown'
     )
 
@@ -41,7 +32,7 @@ def help_msg(message):
     keyboard = Keyboard()
 
     bot.send_message(
-        message.chat.id, Messages.HELP_MSG,
+        message.chat.id, messages.HELP_MSG,
         reply_markup=keyboard.add("Всё понятно"),
         parse_mode='Markdown'
     )
@@ -53,7 +44,7 @@ def great_msg(message):
 
     bot.send_message(
         message.chat.id,
-        Messages.GREAT_MESSAGE,
+        messages.GREAT_MESSAGE,
         reply_markup=keyboard.remove()
     )
 
@@ -63,7 +54,7 @@ def ask_msg(message):
     keyboard = Keyboard()
 
     bot.send_message(
-        message.chat.id, Messages.ASK_MESSAGE,
+        message.chat.id, messages.ASK_MESSAGE,
         reply_markup=keyboard.add("Помощь")
     )
 

@@ -1,13 +1,9 @@
-class Config:
-    BOT_TOKEN = "1828092814:AAEclsE8Sio47Jtc92SN9_5bVtcMrZeQdww"
+import os
+from dotenv import load_dotenv
 
+dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
 
-class Messages:
-    START_MSG = "Вы задаете вопрос, на который можно ответить «да» или «нет», а шар дает ответ. " \
-                "Спрашивайте. "
+if os.path.exists(dotenv_path):
+    load_dotenv(dotenv_path)
 
-    HELP_MSG = "Вы задаёте любой вопрос, на который можно ответить «да», «нет» или «может быть», а шар вам отвечает."
-
-    ASK_MESSAGE = "Спрашивайте."
-
-    GREAT_MESSAGE = 'Отлично! Задайте свой вопрос.'
+BOT_TOKEN = os.environ.get('BOT_TOKEN')
