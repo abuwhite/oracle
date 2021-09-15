@@ -7,18 +7,17 @@ The magic ball of predictions is a very simple and positive way to find out the 
 
 Clone the repo and install packages
 ```shell
-$ git clone git@github.com:znhv/magipy.git && cd magipy && pip3 install -r requirements.txt
+$ git clone https://github.com/znhv/magipy.git && cd magiba && pip3 install -r requirements.txt
 ```
 
-Create .env with the environment variables listed below
+Copy and edit `.env` with your own values.
 ```shell
-magipy$ cd bot && touch .env
+magiba$ cd bot && cp sample.env .env
 ```
 
 #### Environment variables
 `BOT_TOKEN` — Telegram bot token
 
-Also, please, consider looking at `.env.sample`.
 
 ## Usage
 
