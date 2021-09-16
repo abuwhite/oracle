@@ -1,4 +1,4 @@
-# Magic Ball bot
+# Oracle bot
 
 The magic ball of predictions is a very simple and positive way to find out the answer to your question. The magic ball can give both a specific answer to the question yes or no, and surprise you a little with the answer.
 
@@ -7,12 +7,12 @@ The magic ball of predictions is a very simple and positive way to find out the 
 
 Clone the repo and install packages
 ```shell
-$ git clone https://github.com/znhv/magipy.git && cd magiba && pip3 install -r requirements.txt
+$ git clone https://github.com/znhv/oracle.git && cd oracle && pip3 install -r requirements.txt
 ```
 
 Copy and edit `.env` with your own values.
 ```shell
-magiba$ cd bot && cp sample.env .env
+oracle$ cd bot && cp sample.env .env
 ```
 
 #### Environment variables
