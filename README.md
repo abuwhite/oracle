@@ -1,8 +1,7 @@
-# Oracle bot
+# [@oracleot_bot](https://t.me/oracleot_bot) main repository
 
 The bot can give both a specific yes or no answer to your question and surprise you a bit with the answer.
-    
-Find it on Telegram as [Oracle](https://t.me/oracleot_bot)
+
 ## Installation
 
 Clone the repo and install packages
