@@ -59,6 +59,7 @@ def ask_msg(message):
     )
 
 
+@bot.message_handler(commands=["fortune"])
 @bot.message_handler(content_types=["text"])
 def get_answer(message):
     keyboard = Keyboard()
