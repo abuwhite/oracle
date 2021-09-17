@@ -31,7 +31,7 @@ share/python-wheels/
 MANIFEST
 
 # .env
-bot/.env
+#bot/.env
 
 # Idea Files
 .idea
