@@ -1,8 +1,7 @@
 # Oracle bot
 
-The magic ball of predictions is a very simple and positive way to find out the answer to your question. The magic ball can give both a specific answer to the question yes or no, and surprise you a little with the answer.
+The bot can give both a specific yes or no answer to your question and surprise you a bit with the answer.
 
-  
 ## Installation
 
 Clone the repo and install packages
