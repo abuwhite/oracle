@@ -30,9 +30,6 @@ share/python-wheels/
 *.egg
 MANIFEST
 
-# .env
-#bot/.env
-
 # Idea Files
 .idea
 
@@ -115,7 +112,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-bot/.env
+#bot/.env
 .venv
 env/
 venv/
