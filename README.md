@@ -30,7 +30,7 @@ $ python3 -m bot
 Command | Description
 :--- | :---
 /start | Start bot.
-/fortune | Random response.
+/fortune | Random Response.
 /help | Show Help Message.
 
 
