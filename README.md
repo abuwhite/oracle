@@ -31,7 +31,7 @@ Command | Description
 :--- | :---
 /start | Start bot.
 /fortune | Random Response.
-/help | Show Help Message.
+/help | Show Help.
 
 
 ## License
