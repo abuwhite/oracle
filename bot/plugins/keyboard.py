@@ -2,7 +2,7 @@ import telebot
 
 
 class Keyboard:
-    """Class keyboard"""
+    """Class keyboard."""
 
     def __init__(self):
         self.keyboard = telebot.types.ReplyKeyboardMarkup(True)

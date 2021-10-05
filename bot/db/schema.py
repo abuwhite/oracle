@@ -3,14 +3,14 @@ from sqlite3 import Error
 
 
 def create_connection(db_file):
-    """ create a database connection to the SQLite database
-        specified by the db_file
-    :param db_file: database file
-    :return: Connection object or None
+    """Create a database connection to the SQLite database.
+
+    Args:
+        db_file: database file
     """
     conn = None
     try:
-        print('Connected db!', db_file)
+        print("Connected db!", db_file)
         conn = sqlite3.connect(db_file)
     except Error as e:
         print(e)
@@ -19,10 +19,11 @@ def create_connection(db_file):
 
 
 def select_answer(conn, id):
-    """
-    Query all rows in the tasks table
-    :param conn: the Connection object
-    :return:
+    """Query all rows in the tasks table.
+
+    Args:
+        conn: the Connection object
+        id: id
     """
     cur = conn.cursor()
     cur.execute("SELECT * FROM answers WHERE key == {}".format(id))
@@ -35,10 +36,11 @@ def select_answer(conn, id):
 
 
 def select_warning(conn, id):
-    """
-    Query all rows in the tasks table
-    :param conn: the Connection object
-    :return:
+    """Query all rows in the tasks table.
+
+    Args:
+        conn: the Connection object
+        id: id
     """
     cur = conn.cursor()
     cur.execute("SELECT * FROM warnings WHERE key == {}".format(id))
@@ -51,10 +53,11 @@ def select_warning(conn, id):
 
 
 def select_question(conn, id):
-    """
-    Query all rows in the tasks table
-    :param conn: the Connection object
-    :return:
+    """Query all rows in the tasks table.
+
+    Args:
+        conn: the Connection object
+        id: id
     """
     cur = conn.cursor()
     cur.execute("SELECT * FROM questions WHERE key == {}".format(id))
@@ -69,7 +72,6 @@ def select_question(conn, id):
 def main(answer_num, warning_num, question_num):
     database = "./bot/db/sqlite.db"
 
-    # create a database connection
     conn = create_connection(database)
     with conn:
         answer = select_answer(conn, answer_num)
@@ -84,5 +86,5 @@ def main(answer_num, warning_num, question_num):
         return answer, warning, question
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
