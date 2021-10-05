@@ -1,14 +1,14 @@
-import telebot
+from telebot import types
 
 
 class Keyboard:
     """Class keyboard."""
 
     def __init__(self):
-        self.keyboard = telebot.types.ReplyKeyboardMarkup(True)
+        self.keyboard = types.ReplyKeyboardMarkup(True)
 
     def remove(self):
-        self.keyboard = telebot.types.ReplyKeyboardRemove(True)
+        self.keyboard = types.ReplyKeyboardRemove(True)
         return self.keyboard
 
     def add(self, *args):

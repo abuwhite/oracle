@@ -1,6 +1,8 @@
 import sqlite3
 from sqlite3 import Error
 
+DATABASE_PATH = "./bot/db/sqlite.db"
+
 
 def create_connection(db_file):
     """Create a database connection to the SQLite database.
@@ -10,11 +12,9 @@ def create_connection(db_file):
     """
     conn = None
     try:
-        print("Connected db!", db_file)
         conn = sqlite3.connect(db_file)
-    except Error as e:
-        print(e)
-
+    except Error:
+        return 'Error Establishing a Database Connection'
     return conn
 
 
@@ -70,21 +70,12 @@ def select_question(conn, id):
 
 
 def main(answer_num, warning_num, question_num):
-    database = "./bot/db/sqlite.db"
-
-    conn = create_connection(database)
+    conn = create_connection(DATABASE_PATH)
     with conn:
         answer = select_answer(conn, answer_num)
-        print("[ANSWER IS SELECTED]", answer)
 
         warning = select_warning(conn, warning_num)
-        print("[WARNING IS SELECTED]", warning)
 
         question = select_question(conn, question_num)
-        print("[QUESTION IS SELECTED]", question)
 
         return answer, warning, question
-
-
-if __name__ == "__main__":
-    main()
